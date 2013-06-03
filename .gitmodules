@@ -1,0 +1,3 @@
+[submodule "aloha-editor"]
+	path = aloha-editor
+	url = git@barcamp.office:aloha-editor.git
