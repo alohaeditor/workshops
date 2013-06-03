@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Aloha &middot; Bootstrap</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../aloha-editor/src/css/aloha.css" type="text/css">
+    <link rel="stylesheet" href="../aloha-editor/src/plugins/common/ui-a-la-carte/css/ui-a-la-carte.css" type="text/css">
+    <link href="index.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="toolbar" class="navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+      <div id="menu">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#format" data-toggle="tab">Format</a></li>
+          <li><a href="#insert" data-toggle="tab">Insert</a></li>
+          <li class="not-in-scope"><a href="#link" data-toggle="tab">Link</a></li>
+          <li class="not-in-scope"><a href="#table" data-toggle="tab">Table</a></li>
+        </ul>
+      </div><!--/menu-->
+
+      <div id="toolbar-components" class="tab-content">
+        <div class="tab-pane active" id="format">
+          <div class="btn-group">
+            <button class="btn" id="aloha-component-bold"><span class="aloha-icon"></span></button>
+            <button class="btn" id="aloha-component-italic"><span class="aloha-icon"></span></button>
+            <button class="btn" id="aloha-component-underline"><span class="aloha-icon"></span></button>
+            <button class="btn" id="aloha-component-strikethrough"><span class="aloha-icon"></span></button>
+            <button class="btn" id="aloha-component-subscript"><span class="aloha-icon"></span></button>
+            <button class="btn" id="aloha-component-superscript"><span class="aloha-icon"></span></button>
+            <button class="btn" id="aloha-component-quote"><span class="aloha-icon"></span></button>
+          </div>
+          <div class="btn-group">
+            <button class="btn" id="aloha-component-ordered-list"><span class="aloha-icon"></span></button>
+            <button class="btn" id="aloha-component-unordered-list"><span class="aloha-icon"></span></button>
+            <button class="btn" id="aloha-component-indent-list" disabled="disabled"><span class="aloha-icon"></span></button>
+            <button class="btn" id="aloha-component-outdent-list" disabled="disabled"><span class="aloha-icon"></span></button>
+          </div>
+
+          <div id="aloha-component-format-block" class="btn-group dropdown">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+              <span class="dropdown-text">Paragraph</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="aloha-component-h" id="aloha-component-h1" href="#">Heading 1</a></li>
+              <li><a class="aloha-component-h" id="aloha-component-h2" href="#">Heading 2</a></li>
+              <li><a class="aloha-component-h" id="aloha-component-h3" href="#">Heading 3</a></li>
+              <li><a class="aloha-component-h" id="aloha-component-h4" href="#">Heading 4</a></li>
+              <li><a class="aloha-component-h" id="aloha-component-h5" href="#">Heading 5</a></li>
+              <li><a class="aloha-component-h" id="aloha-component-h6" href="#">Heading 6</a></li>
+              <li><a id="aloha-component-p" href="#">Paragraph</a></li>
+              <li><a id="aloha-component-pre" href="#">Preformatted</a></li>
+              <li><a id="aloha-component-blockquote" href="#">Blockquote</a></li>
+              <li><a id="aloha-component-remove-format" href="#">Remove format</a></li>
+            </ul>
+          </div>
+        </div> <!--/tab-pane #format-->
+
+        <div class="tab-pane" id="insert">
+          <div class="btn-group">
+            <button class="btn" id="aloha-component-insert-link"><span class="aloha-icon"></span></button>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="link">
+          <div class="btn-group">
+            <button class="btn" id="aloha-component-remove-link" disabled="disabled"><span class="aloha-icon"></span></button>
+            <input type="text" id="aloha-component-edit-link" disabled="disabled" />
+          </div>
+          <div id="aloha-component-format-link" class="btn-group dropdown">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+              <span class="dropdown-text">Link Button</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="aloha-component-link" id="aloha-component-small" href="#">small</a></li>
+              <li><a class="aloha-component-link" id="aloha-component-large" href="#">large</a></li>
+            </ul>
+          </div>
+        </div>
+
+        </div>
+      </div>
+      </div> <!--/toolbar-components-->
+    </div> <!--/toolbar-->
+
+    <div class="container">
+      <div class="masthead">
+        <h3 class="muted aloha-editable">Project name</h3>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Downloads</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jumbotron -->
+      <div class="jumbotron aloha-editable">
+        <h1>Marketing stuff!</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <a class="btn btn-large btn-success" href="#">Get started today</a>
+      </div>
+
+      <hr>
+
+      <div class="row-fluid">
+        <div class="span4 aloha-editable">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4 aloha-editable">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="span4 aloha-editable">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; Company 2013</p>
+      </div>
+
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../aloha-editor/src/lib/require.js"></script>
+    <script src="../aloha-editor/src/lib/vendor/jquery-1.7.2.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+    <script src="../aloha-editor/src/lib/aloha.js"
+      data-aloha-plugins="common/ui,
+                          common/format,
+                          common/table,
+                          common/list,
+                          common/link,
+                          common/undo,
+                          common/contenthandler,
+                          common/paste,
+                          common/characterpicker,
+                          common/commands,
+                          common/block,
+                          common/image,
+                          common/abbr,
+                          common/horizontalruler,
+                          common/align,
+                          common/dom-to-xhtml,
+                          extra/formatlesspaste,
+                          extra/toc,
+                          extra/headerids,
+                          extra/listenforcer,
+                          extra/metaview,
+                          extra/numerated-headers,
+                          extra/wai-lang,
+                          extra/flag-icons,
+                          extra/linkbrowser,
+                          extra/imagebrowser,
+                          extra/cite"></script>
+    <script type="text/javascript">
+      Aloha.ready( function(){
+        Aloha.jQuery('.aloha-editable').aloha();
+      });
+    </script>
+  </body>
+</html>
