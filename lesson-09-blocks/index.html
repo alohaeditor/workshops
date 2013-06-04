@@ -124,6 +124,15 @@ volutpat elit. Nam sagittis nisi dui.
 		<script>var Aloha={settings:{sidebar:{disabled:true}}};</script>
 		<script src="../aloha-editor/src/lib/require.js"></script>
 		<script src="../aloha-editor/src/lib/vendor/jquery-1.7.2.js"></script>
+		<script>
+Aloha = {
+	settings: {
+		bundles: {
+			'lesson09' : '../../../lesson-09-blocks'
+		}
+	}
+};
+		</script>
 		<script src="../aloha-editor/src/lib/aloha.js"
 		        data-aloha-plugins="common/ui,
 		                            common/format,
@@ -150,7 +159,7 @@ volutpat elit. Nam sagittis nisi dui.
 		                            extra/linkbrowser,
 		                            extra/imagebrowser,
 		                            extra/cite,
-		                            extra/youtube"></script>
+		                            lesson09/mytube"></script>
 		<script src="../assets/app.js"></script>
 	</body>
 </html>
