@@ -21,10 +21,16 @@
 
 		<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="author" href="humans.txt" />
-		<link rel="stylesheet" href="assets/style.css" type="text/css" />
+		<link rel="stylesheet" href="../assets/style.css" type="text/css" />
 
 		<link rel="stylesheet" type="text/css"
 		      href="http://alohaeditor.org/builds/stable/alohaeditor-0.23.6/aloha/css/aloha.css">
+
+		<style>
+div[data-aloha-block-type="YouTubeBlock"] {
+	display: inline-block;
+}
+		</style>
 
 	</head>
 	<body>
@@ -57,10 +63,10 @@
 				<span class="lettering white">
 					<b class="a"></b><b class="l"></b><b class="o"></b><b class="h"></b><b class="a last"></b>
 				</span>
-				<h1>Making Text Bold.</h1>
+				<h1>YouTube Plugin</h1>
 				<h2>
-					<div>A beginner’s dive into the deep end of the pool.</div>
-					<strong>Martin Schönberger &amp; Tobias Steiner</strong>
+					<div>YouTube magic with contenthandlers and Aloha blocks</div>
+					<strong>Clemens Prerovsky</strong>
 				</h2>
 			</div>
 		</header>
@@ -114,9 +120,11 @@ volutpat elit. Nam sagittis nisi dui.
 
 		<!--,
 		    | aloha
-		    `----------!>
-		<script>var Aloha={settings:{sidebar:{disabled:true}}};</script>
-		<script src="http://alohaeditor.org/builds/stable/alohaeditor-0.23.6/aloha/lib/aloha-full.min.js"
+		    `---------->
+		<script>var Aloha={settings:{sidebar:{disabled:true},bundles:{'lesson09':'../../../lesson-09-blocks'}}};</script>
+		<script src="../aloha-editor/src/lib/require.js"></script>
+		<script src="../aloha-editor/src/lib/vendor/jquery-1.7.2.js"></script>
+		<script src="../aloha-editor/src/lib/aloha.js"
 		        data-aloha-plugins="common/ui,
 		                            common/format,
 		                            common/table,
@@ -141,7 +149,8 @@ volutpat elit. Nam sagittis nisi dui.
 		                            extra/flag-icons,
 		                            extra/linkbrowser,
 		                            extra/imagebrowser,
-		                            extra/cite"></script>
-		<script src="assets/app.js"></script>
+		                            extra/cite,
+		                            lesson09/mytube"></script>
+		<script src="../assets/app.js"></script>
 	</body>
 </html>
