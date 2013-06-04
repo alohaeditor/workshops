@@ -1,0 +1,25 @@
+#page {
+    padding: 10px;
+    margin: 0 auto;
+    width: 90%;
+    height: 700px;
+}
+
+#markdown, #html {
+    width: 44%;
+    height: 500px;
+    padding: 1%;
+    margin: 2%;
+}
+
+
+#html {
+    float: left;
+    outline: 5px dotted red;
+}
+
+#markdown {
+    border: 0;
+    resize: none;
+    outline: 5px dotted green;
+}
