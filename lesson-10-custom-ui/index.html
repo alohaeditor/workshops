@@ -7,7 +7,7 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../aloha-editor/src/css/aloha.css" type="text/css">
     <link rel="stylesheet" href="../aloha-editor/src/plugins/common/ui-a-la-carte/css/ui-a-la-carte.css" type="text/css">
-    <link href="index.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
   </head>
 
   <body>
@@ -72,15 +72,31 @@
             <button class="btn" id="aloha-component-remove-link" disabled="disabled"><span class="aloha-icon"></span></button>
             <input type="text" id="aloha-component-edit-link" disabled="disabled" />
           </div>
-          <div id="aloha-component-format-link" class="btn-group dropdown">
+          <div id="aloha-component-btn-size" class="btn-group dropdown">
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-              <span class="dropdown-text">Link Button</span>
+              <span class="dropdown-text">Button size</span>
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-              <li><a class="aloha-component-link" id="aloha-component-small" href="#">small</a></li>
-              <li><a class="aloha-component-link" id="aloha-component-large" href="#">large</a></li>
+              <li><a class="aloha-component-link" id="aloha-component-btn-size-large" href="#">large</a></li>
+              <li><a class="aloha-component-link" id="aloha-component-btn-size-default" href="#">default</a></li>
+              <li><a class="aloha-component-link" id="aloha-component-btn-size-small" href="#">small</a></li>
+              <li><a class="aloha-component-link" id="aloha-component-btn-size-mini" href="#">mini</a></li>
             </ul>
+          </div>
+          <div id="aloha-component-btn-style" class="btn-group dropdown">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+              <span class="dropdown-text">Button style</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="aloha-component-link" id="aloha-component-btn-style-primary" href="#">primary</a></li>
+              <li><a class="aloha-component-link" id="aloha-component-btn-style-info" href="#">info</a></li>
+              <li><a class="aloha-component-link" id="aloha-component-btn-style-success" href="#">success</a></li>
+              <li><a class="aloha-component-link" id="aloha-component-btn-style-warning" href="#">warning</a></li>
+              <li><a class="aloha-component-link" id="aloha-component-btn-style-danger" href="#">danger</a></li>
+              <li><a class="aloha-component-link" id="aloha-component-btn-style-inverse" href="#">inverse</a></li>
+              <li><a class="aloha-component-link" id="aloha-component-btn-style-link" href="#">link</a></li>            </ul>
           </div>
         </div>
 
@@ -105,6 +121,18 @@
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="superbutton" class="btn-group pull-right">
+          <button class="btn">Action</button>
+          <button class="btn dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">a span</a></li>
+          </ul>
         </div>
       </div>
 
@@ -138,48 +166,24 @@
       <hr>
 
       <div class="footer">
-        <p>&copy; Company 2013</p>
+        <p>&copy; Aloha Editor 2013</p>
       </div>
 
     </div>
 
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IMPORTANT: load require before jQuery, so jQuery defines itself as module --> 
     <script src="../aloha-editor/src/lib/require.js"></script>
     <script src="../aloha-editor/src/lib/vendor/jquery-1.7.2.js"></script>
+    <!-- boostrap needs jQuery because it adds some jQuery plugins -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="index.js"></script>
+    <script src="aloha-config.js"></script>
     <script src="../aloha-editor/src/lib/aloha.js"
       data-aloha-plugins="common/ui,
                           common/format,
-                          common/table,
-                          common/list,
                           common/link,
-                          common/undo,
                           common/contenthandler,
                           common/paste,
-                          common/characterpicker,
-                          common/commands,
-                          common/block,
-                          common/image,
-                          common/abbr,
-                          common/horizontalruler,
-                          common/align,
-                          common/dom-to-xhtml,
-                          extra/formatlesspaste,
-                          extra/toc,
-                          extra/headerids,
-                          extra/listenforcer,
-                          extra/metaview,
-                          extra/numerated-headers,
-                          extra/wai-lang,
-                          extra/flag-icons,
-                          extra/linkbrowser,
-                          extra/imagebrowser,
-                          extra/cite"></script>
-    <script type="text/javascript">
-      Aloha.ready( function(){
-        Aloha.jQuery('.aloha-editable').aloha();
-      });
-    </script>
+                          common/commands"></script>
+    <script src="aloha-ready.js"></script>
   </body>
 </html>
