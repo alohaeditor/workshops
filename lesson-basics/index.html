@@ -21,8 +21,8 @@
 
 		<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="author" href="humans.txt" />
-		<link rel="stylesheet" href="assets/style.css" type="text/css" />
-		<link rel="stylesheet" type="text/css" href="aloha-editor/src/css/aloha.css">
+		<link rel="stylesheet" href="../assets/style.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../aloha-editor/src/css/aloha.css">
 
 	</head>
 	<body>
@@ -36,12 +36,12 @@
 		<![endif]-->
 		<h1 class="width-breezy centered padded">
 			<b>Learning&nbsp;</b>
-			<img src="assets/aloha-logo-black.png" alt="" />
+			<img src="../assets/aloha-logo-black.png" alt="" />
 		</h1>
 		<nav>
 			<ul>
 				<li class="special">lessons</li>
-				<li><a href="lesson-basics"><b>/</b>basics</a></li>
+				<li class="active"><a href="lesson-basics"><b>/</b>basics</a></li>
 				<li><a href="lesson-plugins"><b>/</b>plugins</a></li>
 				<li><a href="lesson-events"><b>/</b>events</a></li>
 				<li><a href="lesson-ui"><b>/</b>ui</a></li>
@@ -55,10 +55,13 @@
 				<span class="lettering white">
 					<b class="a"></b><b class="l"></b><b class="o"></b><b class="h"></b><b class="a last"></b>
 				</span>
-				<h1>Your topic.</h1>
+				<h1>Basics</h1>
 				<h2>
-					<div>What your workshop will cover.</div>
-					<strong>Your Name.</strong>
+					<div>
+						A introduction into the world of WYSIWYG editing with
+						Aloha Editor.
+					</div>
+					<strong>Petro Salema</strong>
 				</h2>
 			</div>
 		</header>
@@ -174,9 +177,9 @@
 			};
 		</script>
 
-		<script src="aloha-editor/src/lib/require.js"></script>
-		<script src="aloha-editor/src/lib/vendor/jquery-1.7.2.js"></script>
-		<script src="aloha-editor/src/lib/aloha.js"
+		<script src="../aloha-editor/src/lib/require.js"></script>
+		<script src="../aloha-editor/src/lib/vendor/jquery-1.7.2.js"></script>
+		<script src="../aloha-editor/src/lib/aloha.js"
 		        data-aloha-plugins="common/ui,
 		                            common/format,
 		                            common/table,
@@ -203,13 +206,6 @@
 		                            extra/imagebrowser,
 		                            extra/cite"></script>
 
-		<!-- `wikidocs -->
-		<script src="wikidocs/base64.js"></script>
-		<script src="wikidocs/signed-request.js"></script>
-		<script src="wikidocs/sha256.js"></script>
-		<script src="http://54.246.87.2:8001/js/vendor/sockjs.min.js"></script>
-		<script src="http://54.246.87.2:8001/js/reza-0.1.0.min.js"></script>
-
-		<!-- script src="assets/exercise.js"></script -->
+		<script src="exercise.js"></script>
 	</body>
 </html>
