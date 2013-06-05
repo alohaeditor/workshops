@@ -195,13 +195,19 @@ header.collapsed>:first-child>*>strong {
 
 /** -- `editables -- */
 section>h1 {
+	margin-bottom: 20px;
+	text-align: center;
 	font-size: 2.4em;
 	font-weight: 300;
-	margin-bottom: 20px;
 }
 section>div {
 	font-size: 1.3em;
 	line-height: 1.4em;
+}
+section>div q {
+	background: whiteSmoke;
+	font-size: 1.3em;
+	line-height: 1em;
 }
 
 /** -- `lettering -- */
@@ -216,6 +222,14 @@ section>div {
 	border-color: #363636;
 	color: rgba(0,0,0,0);
 	line-height: 1em;
+
+	-webkit-transition: opacity 0.3s ease-in-out;
+	   -moz-transition: opacity 0.3s ease-in-out;
+	     -o-transition: opacity 0.3s ease-in-out;
+	        transition: opacity 0.3s ease-in-out;
+}
+.lettering>b:hover {
+	opacity: 0.5;
 }
 .lettering>.a {
 	border-width: 0 15px 30px 15px;
@@ -249,23 +263,6 @@ section>div {
 }
 .white.lettering>.a:last-child {
 	border-bottom-color: #fff;
-}
-
-
-.lettering>.a:hover, .colored-lettering>.a {
-	border-color: transparent transparent #f5e653 transparent;
-}
-.lettering>.l:hover, .colored-lettering>.l {
-	border-color: #79be6a;
-}
-.lettering>.o:hover, .colored-lettering>.o {
-	background: #58a9da;
-}
-.lettering>.h:hover, .colored-lettering>.h {
-	border-color: #c33a36;
-}
-.lettering>.a:last-child:hover, .colored-lettering>.a:last-child {
-	border-bottom-color: #4cd2da;
 }
 
 /** -- `footer -- */
