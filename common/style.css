@@ -103,7 +103,6 @@ header {
 	position: relative;
 	width: 100%;
 	height: 400px;
-	min-height: 400px;
 	background-color: #4cd2da;
 	background-image: -webkit-linear-gradient(
 		50deg,
@@ -155,7 +154,7 @@ header h2 {
 }
 
 header.collapsed {
-	min-height: 100px;
+	height: 100px;
 }
 header.collapsed>:first-child>* {
 	display: inline-block;
