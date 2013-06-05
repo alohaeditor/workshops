@@ -7,8 +7,8 @@
 		<meta charset="utf-8">
 		<meta name="description" content="Aloha Editor Workshops">
 		<meta name="author" content="Team Aloha / please send bugs to developer@alohaeditor.org">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 		<meta property="og:title" content="Aloha Editor Workshops" />
 		<meta property="og:type" content="activity" />
@@ -20,38 +20,33 @@
 		<title>Aloha Editor &middot; BarCamp</title>
 
 		<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
-		<link rel="author" href="../humans.txt" />
+		<link rel="author" href="../common/humans.txt" />
 		<link rel="stylesheet" href="../common/style.css" type="text/css" />
-
-		<link rel="stylesheet" href="basic.css" type="text/css" />
-
 		<link rel="stylesheet" type="text/css" href="../aloha-editor/src/css/aloha.css">
-
-		<!-- script src="modernizr.js"></script -->
-
+		<link rel="stylesheet" href="exercise.css" type="text/css" />
 	</head>
 	<body>
 		<!--[if lt IE 7]>
-			<p class="chromeframe">
-				You are using an <strong>outdated</strong> browser.
-				Please <a href="http://browsehappy.com/">upgrade your browser</a> or
-				<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
-				to improve your experience.
-			</p>
+		<p class="chromeframe">
+			You are using an <strong>outdated</strong> browser.
+			Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+			<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+			to improve your experience.
+		</p>
 		<![endif]-->
 		<h1 class="width-breezy centered padded">
 			<b>Learning&nbsp;</b>
-			<img src="http://www.aloha-editor.org/barcamp/aloha-editor-logo-black.png" alt="" />
+			<img src="../common/aloha-logo-black.png" alt="" />
 		</h1>
 		<nav>
 			<ul>
 				<li class="special">lessons</li>
-				<li><a href="/intro"><b>/</b>intro</a></li>
-				<li><a href="/plugins"><b>/</b>plugins</a></li>
-				<li><a href="/user-interaction"><b>/</b>user-interaction</a></li>
-				<li><a href="/ui-a-la-carte"><b>/</b>ui-a-la-carte</a></li>
-				<li><a href="/bold"><b>/</b>bold</a></li>
-				<li><a href="/block"><b>/</b>blocks</a></li>
+				<li><a href="lesson-basics"><b>/</b>basics</a></li>
+				<li><a href="lesson-plugins"><b>/</b>plugins</a></li>
+				<li class="active"><a href="lesson-events"><b>/</b>events</a></li>
+				<li><a href="lesson-ui"><b>/</b>ui</a></li>
+				<li><a href="lesson-bold"><b>/</b>bold</a></li>
+				<li><a href="lesson-block"><b>/</b>blocks</a></li>
 			</ul>
 		</nav>
 		<header class="centered _collapsed _peach _cream _asphalt _slime _ocean
@@ -60,67 +55,62 @@
 				<span class="lettering white">
 					<b class="a"></b><b class="l"></b><b class="o"></b><b class="h"></b><b class="a last"></b>
 				</span>
-				<h1>Using Aloha Editor Events.</h1>
+				<h1>Using Aloha Editor Events</h1>
 				<h2>
-					<div>A beginner’s dive into the deep end of the pool.</div>
+					<div>Listening and responding to editing interactions.</div>
 					<strong>Rene Kapusta</strong>
 				</h2>
 			</div>
 		</header>
+
 		<section class="width-breezy">
-		<div id="page">
-		    <h1>Aloha Editor: <b>Events</b></h1>
-		    <p>Learn about <a href="http://aloha-editor.org/guides/events.html">events</a> in Aloha Editor.</p>
-		    <div id="html" class="edit">
-		        I ❤ <em>Aloha Editor</em> <strong>Events</strong>
-		    </div>
+			<h1 id="editable-header" class="editable">Aloha Editor: <b>Events</b></h1>
+			<p>
+				Learn about <a href="http://aloha-editor.org/guides/events.html">events</a>
+				in Aloha Editor guides.
+			</p>
+			<div id="html" class="editable">
+				I ❤ <em>Aloha Editor</em> <strong>Events</strong>
+			</div>
+			<textarea id="markdown" oninput="this.editor.update()">I ❤ *Aloha Editor* **Events**</textarea>
+		</section>
 
-            <textarea id="markdown" oninput="this.editor.update()">I ❤ *Aloha Editor* **Events**</textarea>
+		<footer><a class="lettering" href="#"><b class="a"></b></a></footer>
 
-        </div>
-	</section>
+		<!-- `aloha -->
+		<script src="aloha-config.js"></script>
 
-	<footer>
-		<a class="lettering" href="#"><b class="a"></b></a>
-	</footer>
+		<script src="../aloha-editor/src/lib/require.js"></script>
+		<script src="../aloha-editor/src/lib/vendor/jquery-1.7.2.js"></script>
+		<script src="../aloha-editor/src/lib/aloha.js"
+		        data-aloha-plugins="common/ui,
+		                            common/format,
+		                            common/table,
+		                            common/list,
+		                            common/link,
+		                            common/highlighteditables,
+		                            common/contenthandler,
+		                            common/paste,
+		                            common/characterpicker,
+		                            common/commands,
+		                            common/block,
+		                            common/image,
+		                            common/abbr,
+		                            common/horizontalruler,
+		                            common/align,
+		                            common/dom-to-xhtml,
+		                            extra/textcolor,
+		                            extra/hints,
+		                            extra/metaview,
+		                            extra/linkbrowser,
+		                            extra/imagebrowser,
+		                            extra/cite,
+		                            workshop/hearts"></script>
 
+		<script src="vendor/onsnap.js"></script>
+		<script src="vendor/markdown.js"></script>
+		<script src="vendor/to-markdown.js"></script>
 
-    <script src="aloha-config.js"></script>
-
-    <script src="/aloha-editor-workshop/aloha-editor/src/lib/require.js"></script>
-    <script src="/aloha-editor-workshop/aloha-editor/src/lib/vendor/jquery-1.7.2.js"></script>
-
-    <script src="/aloha-editor-workshop/aloha-editor/src/lib/aloha.js"
-	        data-aloha-plugins="common/ui,
-	                            common/format,
-	                            common/table,
-	                            common/list,
-	                            common/link,
-	                            common/undo,
-	                            common/contenthandler,
-	                            common/paste,
-	                            common/characterpicker,
-	                            common/commands,
-	                            common/block,
-	                            common/image,
-	                            common/abbr,
-	                            common/horizontalruler,
-	                            common/align,
-	                            common/dom-to-xhtml,
-	                            extra/textcolor,
-	                            extra/metaview,
-	                            extra/linkbrowser,
-	                            extra/imagebrowser,
-	                            extra/cite,
-	                            workshop/hearts"></script>
-
-
-        <!-- onSnap.js 
-        <script src="vendor/onsnap.js"></script>
-        -->
-        <script src="vendor/markdown.js"></script>
-        <script src="vendor/to-markdown.js"></script>
-
-	    <script src="app.js"></script>
+		<script src="exercise.js"></script>
 	</body>
-</html>
+</htML>
