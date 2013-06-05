@@ -3,8 +3,6 @@
     Aloha.require(['aloha/copypaste'], function (CopyPaste) {
 
         Aloha.ready(function () {
-            $('.edit').aloha();
-
             Aloha.bind('aloha-smart-content-changed', function ($event, params) {
                 if (params.triggerType !== 'keypress') {
                     return false;
@@ -26,6 +24,14 @@
 
                 CopyPaste.selectAllOf(range.startContainer);
                 Aloha.execCommand('insertHTML', false, html);
+                //CopyPaste.setSelectionAt(html);
+                //CopyPaste.selectAllOf($(html));
+                //window.console.log(range);
+                //var $html = $(html);
+                //rangeObject = new GENTICS.Utils.RangeObject();
+                //rangeObject.endContainer = rangeObject.startContainer = $html;
+                //rangeObject.startOffset = rangeObject.endOffset = $html.get(0).innerHTML.length;
+                //rangeObject.select();
             });
             
             
@@ -34,6 +40,17 @@
                 
                 $('#markdown').val(md);
             });
+            
+            // Make all HTML elements with a CSS class "edit" editable via Aloha Editor
+            //*
+            $('.edit').aloha();
+            //*/
+            /* on snap editable
+            window.document.addEventListener("snap", function () {
+                $('.edit').aloha();
+                window.console.log('aloha! snap to edit :-)');
+            });
+            //*/
         });
 
     });

@@ -1,0 +1,71 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+       <head>
+              <title>Aloha Editor: onSnap editable!</title>
+
+              <style>
+                body {
+                    font-family: arial;
+                }
+                .editable {
+                    margin: 5px auto;
+                    width: 50%;
+                }
+                
+                h1, h2 {
+                    margin: 20px auto;
+                }
+              </style>
+
+              <!-- load the Aloha Editor CSS styles -->
+              <link href="http://cdn.aloha-editor.org/latest/css/aloha.css" rel="stylesheet" type="text/css" />
+
+       </head>
+       <body>
+              <h1 class="editable">Aloha Editor: onSnap editable!</h1>
+ 
+              <p class="editable"><i><b>Snap to edit</b></i> this paragraph.</p>
+ 
+              <div class="editable">
+                     <h2>HTML5 editable</h2>
+                     <p>Join the Aloha Editor <a href="http://aloha-editor.org/barcamp/">BarCamp</a> in Vienna and follow <a href="https://twitter.com/search?q=%23AEcamp">#AEcamp</a> on Twitter to learn about next generation editable user interfaces.</p>
+                     <p>HTML5 content editable with <a href="http://aloha-editor.org/">Aloha Editor</a>. Activate Aloha Editor with <a href="https://github.com/franzenzenhofer/onsnap.js">onsnap.js</a>.</p>
+                     
+                     <h3>Stay up to date</h3>
+
+                     <ul>
+                            <li><a href="https://twitter.com/alohaeditor">Twitter</a></li>
+                            <li><a href="https://www.facebook.com/alohaeditor">Facebook</a></li>
+                     </ul>
+              </div>
+
+
+              <!-- load the jQuery and require.js libraries -->
+              <script type="text/javascript" src="http://cdn.aloha-editor.org/latest/lib/require.js"></script>
+              <script type="text/javascript" src="http://cdn.aloha-editor.org/latest/lib/vendor/jquery-1.7.2.js"></script>
+              <!-- onSnap.js -->
+              <script type="text/javascript" src="https://googledrive.com/host/0B_fklpg3IDw2XzFPQmN0aExYYmc/onsnap.js"></script>
+              
+ 
+              <!-- load the Aloha Editor core and some plugins -->
+              <script src="http://cdn.aloha-editor.org/latest/lib/aloha.js"
+                                   data-aloha-plugins="common/ui,
+                                                        common/format,
+                                                        common/list,
+                                                        common/link,
+                                                        common/highlighteditables">
+              </script>
+              
+              <!-- make all elements with class="editable" editable with Aloha Editor -->
+              <script type="text/javascript">
+                     Aloha.ready( function() {
+                            var $ = Aloha.jQuery;
+                            
+                            window.document.addEventListener("snap", function () {
+                                $('.editable').aloha();
+                                if (window.console) window.console.log('onsnap editable!');
+                            });
+                     });
+              </script>
+       </body>
+</html>
