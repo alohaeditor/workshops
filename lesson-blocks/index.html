@@ -7,8 +7,8 @@
 		<meta charset="utf-8">
 		<meta name="description" content="Aloha Editor Workshops">
 		<meta name="author" content="Team Aloha / please send bugs to developer@alohaeditor.org">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 		<meta property="og:title" content="Aloha Editor Workshops" />
 		<meta property="og:type" content="activity" />
@@ -20,16 +20,14 @@
 		<title>Aloha Editor &middot; BarCamp</title>
 
 		<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
-		<link rel="author" href="humans.txt" />
-		<link rel="stylesheet" href="../assets/style.css" type="text/css" />
-
-		<link rel="stylesheet" type="text/css"
-		      href="http://alohaeditor.org/builds/stable/alohaeditor-0.23.6/aloha/css/aloha.css">
+		<link rel="author" href="../common/humans.txt" />
+		<link rel="stylesheet" href="../common/style.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../aloha-editor/src/css/aloha.css">
 
 		<style>
-div[data-aloha-block-type="YouTubeBlock"] {
-	display: inline-block;
-}
+			div[data-aloha-block-type="YouTubeBlock"] {
+				display: inline-block;
+			}
 		</style>
 
 	</head>
@@ -44,17 +42,17 @@ div[data-aloha-block-type="YouTubeBlock"] {
 		<![endif]-->
 		<h1 class="width-breezy centered padded">
 			<b>Learning&nbsp;</b>
-			<img src="http://www.aloha-editor.org/barcamp/aloha-editor-logo-black.png" alt="" />
+			<img src="../common/aloha-logo-black.png" alt="" />
 		</h1>
 		<nav>
 			<ul>
 				<li class="special">lessons</li>
-				<li><a href="/intro"><b>/</b>intro</a></li>
-				<li><a href="/plugins"><b>/</b>plugins</a></li>
-				<li><a href="/user-interaction"><b>/</b>user-interaction</a></li>
-				<li><a href="/ui-a-la-carte"><b>/</b>ui-a-la-carte</a></li>
-				<li><a href="/bold"><b>/</b>bold</a></li>
-				<li><a href="/block"><b>/</b>blocks</a></li>
+				<li class="active"><a href="lesson-basics"><b>/</b>basics</a></li>
+				<li><a href="lesson-plugins"><b>/</b>plugins</a></li>
+				<li><a href="lesson-events"><b>/</b>events</a></li>
+				<li><a href="lesson-ui"><b>/</b>ui</a></li>
+				<li><a href="lesson-bold"><b>/</b>bold</a></li>
+				<li><a href="lesson-block"><b>/</b>blocks</a></li>
 			</ul>
 		</nav>
 		<header class="centered _collapsed _peach _cream _asphalt _slime _ocean
@@ -65,63 +63,122 @@ div[data-aloha-block-type="YouTubeBlock"] {
 				</span>
 				<h1>YouTube Plugin</h1>
 				<h2>
-					<div>YouTube magic with contenthandlers and Aloha blocks</div>
+					<div>YouTube magic with contenthandlers and Aloha blocks.</div>
 					<strong>Clemens Prerovsky</strong>
 				</h2>
 			</div>
 		</header>
+
 		<section class="width-breezy">
-			<h1>Aloha Editor: <b>Workshop</b></h1>
-			<div>
+			<h1 id="editable-header" class="editable">Welcome to the <b>Aloha Editor</b> Barcamp!</h1>
+			<div id="editable-article" class="editable">
+				<p>
+					We hope that your will leave from this event with new
+					insight into Aloha Editor's approach  WYSIWYG editing
+					technology, and the great possibilities of what can be built
+					on the web.
+				</p>
 
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
-Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec
-consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero
-egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem
-lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida
-lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
-</p>
+				<p>
+					<q cite="http://www.aloha-editor.org/barcamp">
+						The Aloha Editor is an Open Source project built around
+						the idea of creating the best rich-text content editor
+						for the open web.
+					</q>
+				</p>
 
-<p>
-Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim
-sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in
-urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam
-pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis
-parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris
-vitae nisi at sem facilisis semper ac in est.
-</p>
+				<p>
+					These workshops are designed to bring you from the basics of
+					WYSIWYG editing with Aloha Editor to extending branding the
+					Editor for your own application, and extending its
+					functionality to build cool capabilities on top of the Aloha
+					Editor!
+				</p>
 
-<p>
-Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae,
-sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare,
-ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem
-nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat,
-non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum
-et, tincidunt et orci. Fusce eget orci a orci congue vestibulum. Ut dolor diam,
-elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar
-tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo.
-</p>
+				<p>
+					<table>
+						<tbody>
+							<tr>
+								<td rowspan="1" colspan="2"><b>Workshop topics:</b></td>
+							</tr>
+							<tr>
+								<td><a href="lesson-basics"><b>/</b>basics</a></td>
+								<td>
+									An gentle introduction into the world of WYSIWYG editing with
+									Aloha editor.
+								</td>
+							</tr>
+							<tr>
+								<td><a href="lesson-plugins"><b>/</b>plugins</a></td>
+								<td>Add capabilities through Aloha Editor's plugin system.</td>
+							</tr>
+							<tr>
+								<td><a href="lesson-events"><b>/</b>events</a></td>
+								<td>Listening and responding to editing interactions.</td>
+							</tr>
+							<tr>
+								<td><a href="lesson-ui"><b>/</b>ui</a></td>
+								<td>Brand your own UI with your custom UI.</td>
+							</tr>
+							<tr>
+								<td><a href="lesson-bold"><b>/</b>bold</a></td>
+								<td>
+									An gentle introdution into the world of WYSIWYG editing with
+									Aloha editor.
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/lesson-blocks"><b>/</b>blocks</a></td>
+								<td>How to use blocks to achieve advanced editing capabilities.</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
 
-<p>
-Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis
-facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus
-convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt,
-purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel
-volutpat elit. Nam sagittis nisi dui.
-</p>
+				<p>
+					<ul>
+						<li>
+							This is a list
+							<ol>
+								<li>
+									This is a list in a list
+									<ul>
+										<li>
+											This...
+											<ul>
+												<li>
+													is...
+													<ul>
+														<li>... just showing off</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ol>
+						</li>
+					</ul>
+				</p>
+
+				<p>
+					<img src="http://aloha-editor.org/logo/Aloha%20Editor%20HTML5%20contenteditable%201024.png" alt="" />
+				</p>
 			</div>
 		</section>
 
-		<footer>
-			<a class="lettering" href="#"><b class="a"></b></a>
-		</footer>
+		<footer><a class="lettering" href="#"><b class="a"></b></a></footer>
 
-		<!--,
-		    | aloha
-		    `---------->
-		<script>var Aloha={settings:{sidebar:{disabled:true},bundles:{'lesson09':'../../../lesson-09-blocks'}}};</script>
+		<!-- `aloha --!>
+		<script>
+			var Aloha = {
+				settings: {
+					sidebar: {disabled: false},
+					bundles: {'lesson-blocks': '../../../lesson-blocks'}
+				}
+			};
+		</script>
+
 		<script src="../aloha-editor/src/lib/require.js"></script>
 		<script src="../aloha-editor/src/lib/vendor/jquery-1.7.2.js"></script>
 		<script src="../aloha-editor/src/lib/aloha.js"
@@ -150,7 +207,8 @@ volutpat elit. Nam sagittis nisi dui.
 		                            extra/linkbrowser,
 		                            extra/imagebrowser,
 		                            extra/cite,
-		                            lesson09/mytube"></script>
-		<script src="../assets/app.js"></script>
+		                            lesson-blocks/mytube"></script>
+
+		<script src="exercise.js"></script>
 	</body>
-</html>
+</htML>
