@@ -3,7 +3,15 @@
 .navbar .nav>li>a.aloha-editable-active, .navbar .nav>li>a.aloha-editable:hover  {
   background-color: #fcf8e3;
 }
+.aloha-image-box-active {
+  vertical-align: middle;
+}
+.ui-helper-hidden-accessible {
+  display: none;
+}
 
+
+/* site styling */
 body {
   padding-top: 95px;
   padding-bottom: 60px;

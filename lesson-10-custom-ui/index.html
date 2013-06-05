@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <!--
+// Get all registered component ids
+var ui = Aloha.require(['ui/ui'], function(ui){
+  for (component in ui.components) {
+    console.log('aloha-component-' + component.replace(/([A-Z])/g, function($1){return "-"+$1.toLowerCase();}));
+}});
+    -->
     <div id="toolbar" class="navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -96,7 +103,8 @@
               <li><a class="aloha-component-link" id="aloha-component-btn-style-warning" href="#">warning</a></li>
               <li><a class="aloha-component-link" id="aloha-component-btn-style-danger" href="#">danger</a></li>
               <li><a class="aloha-component-link" id="aloha-component-btn-style-inverse" href="#">inverse</a></li>
-              <li><a class="aloha-component-link" id="aloha-component-btn-style-link" href="#">link</a></li>            </ul>
+              <li><a class="aloha-component-link" id="aloha-component-btn-style-link" href="#">link</a></li>
+            </ul>
           </div>
         </div>
 
@@ -124,16 +132,16 @@
         </div>
       </div>
 
-      <div class="row">
-        <div id="superbutton" class="btn-group pull-right">
-          <button class="btn">Action</button>
-          <button class="btn dropdown-toggle" data-toggle="dropdown">
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">a span</a></li>
-          </ul>
+
+
+      <div class="row my-aloha-toolbar">
+        <div id="aloha-component-image-align-group" class="btn-group pull-right">
+          <button class="btn disabled" id="aloha-component-image-align-left">Left</button>
+          <button class="btn disabled" id="aloha-component-image-align-none">No Align</button>
+          <button class="btn disabled" id="aloha-component-image-align-right">Right</button>
         </div>
+        <input class="input-xlarge pull-right" id="aloha-component-image-source" type="text" disabled>
+        <button id="aloha-component-insert-image" class="btn pull-right">Insert image</button>
       </div>
 
       <!-- Jumbotron -->
@@ -183,7 +191,11 @@
                           common/link,
                           common/contenthandler,
                           common/paste,
+                          common/image,                          
                           common/commands"></script>
     <script src="aloha-ready.js"></script>
+    <script src="image.js"></script>
+    <script src="link-size.js"></script>
+    <script src="link-style.js"></script>
   </body>
 </html>
