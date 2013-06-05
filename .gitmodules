@@ -1,3 +1,4 @@
 [submodule "aloha-editor"]
 	path = aloha-editor
-	url = git@barcamp.office:aloha-editor.git
+	#url = http://barcamp.office/aloha-editor.git
+	url = http://barcamp.aloha-editor.com/aloha-editor.git
