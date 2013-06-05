@@ -9,7 +9,7 @@ define([
 	'i18n!aloha/nls/i18n',
 	'jquery',
 	'css!training/css/training.css'
-], function(Aloha, Plugin, Ui,	Button, i18n, i18nCore, jQuery) {
+], function (Aloha, Plugin, Ui,	Button, i18n, i18nCore, jQuery) {
 	'use strict';
 
 	/**
@@ -26,10 +26,7 @@ define([
 		 * Initialize the plugin
 		 */
 		init: function () {
-			console.log("training init");
+			console.log('training init');
 		}
-
 	});
-
-	
 });

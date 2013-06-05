@@ -1,9 +1,11 @@
-( function ( window, undefined ) {
-	var Aloha = window.Aloha || ( window.Aloha = {} );
+(function (window, undefined) {
+	'use strict';
+
+	var Aloha = window.Aloha || (window.Aloha = {});
 
 	Aloha.settings = {
 		bundles: {
-			'mybundle':'/aloha-editor-workshop/plugin-lesson/plugins'
+			'mybundle':'../../../lesson-plugins/plugins'
 		},
 		plugins: {
 			training: {
@@ -24,4 +26,4 @@
 			 }]
 		}
 	};
-} )( window );
+})(window);
