@@ -7,10 +7,6 @@
 		{
 			name: 'barcamp/header',
 			id: 'editable-header'
-		},
-		{
-			name: 'barcamp/article',
-			id: 'editable-article'
 		}
 	];
 
