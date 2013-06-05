@@ -1,0 +1,55 @@
+# humanstxt.org
+# The humans responsible & technology colophon
+
+# WORKSHOPS
+Christopher Supnig
+Clemens Prerovsky
+Haymo Meran
+Martin Schönbergero
+Petro Salema
+Rene Kapusta
+
+# THANKS
+http://www.gentics.com
+http://www.ektron.com
+
+# TECHNOLOGY
+jQuery, Faricy New Web Font
+
+                            ,oKMMWx,
+                         .oXMMMMMMMMKd,             .   ..
+                        :NMMMMMMMMMMMMMNl         ;XMK.xMMx
+                    ;dkKWMMMMMMMMMMMMMMMMNc    :. ;kkd.'0K:
+               .  ,XMMMMMMMMMMMMMMMMMMMMMMMo   . xMWl  lMMW.
+             .OW, XMMMMMMMMMMMMMMMMMMMMMMMMW. l' ,kxkNNd;c'
+             XMMd :WMMMMMMMMMMMMMMMXKMMMMMMX. ..ol  'xx,
+             KMMWo 'KMMMMMMMMMMMMMMW;NMMMMN, .xWo :X'    .,;;;;,.
+             .0MMMKc.,OMMMMMMNc:kWMN.oMMMX. oNW;  ...;dONMMMMMMMMWO:
+               ;''''.  ;KMMMMMN, 'Oo 'MMW,.OMM:   'xNMMMMMMMMMMMMMMMX'
+              :dO0X0Oko:,;kWMMMN;  . .NWl.OMWc  'kWMMMMMMMMMMMMMMMMMMX
+          .co0MMMMMMMMMMMNdoWMMMW' 0: c'.KMMo  dMMMWKkdllOMMMMMMMMMMMd
+         .NMMMMMMMMMMMMMMMMMMMMMMK...   OMMK  dOd:'  .;lkWMMMMMMMMMMK
+    .xOk .MMMMMMMMMMMMMMMMMMMMMMMMo ., oMMM:     .:xXMMMMMMMMMMMMMMMN.
+    0MN: lMMMMMMMMMMMWKkdooxkKNMMMN.  :WMMX  . :OWMMMMMMMMMMMMMMMMMMMl
+    0x..OMMMMMMMMMMMMNOx:.  '. 'cKMc .WMMMo  cKMMMMMMMMMMMMMMMMMMMMMMo
+   ;; cNMMMMMMMMMMMMMMMMMWk. do   '; lMMMK. ,:,'..      .';lkKWMMMMWk.
+  dK .WMMMMMMMMMMMMMMMMXo,..'''.     'OKo .c    .,:lllllll:;'  .';;.
+:NM0 ;MMMMMMMMMMMMMMMNl:d0NMMMMMNKk       '. .:x0NMMMMMMMMMMMWKd'
+NMMN. 0MMMMMMMMMMMMMMWWMMMNxlKMMM0'  .l      '  . .,oXMMMMMMMMMMMK:
+MMMMX. dNMMMMMMMMMMMMMMMNo.lXMMWl     OO   ,.   cKKko:cKMMMMMMMMMMMl
+0MMMMWk;.'xWMMMMMMMMMMKl;oXMMMk.      dM0. .0Xk:..0MMMNKMMMMMMMMMMMW'
+.kWMMMMMNo ;KMMMMMW0l''kWMMMN:   ; xc lMMX. .KMMWo'NMMMMMMMMMMMMMMMMl
+  .cOWMMMM0c'.;,'.  .xWMMMMX'  .Od OMxOMMMK. .KMMMNWMMMMMMMMMMMMMMMK.
+     ;NMMMMMMN0x:  ,WMMMMMW'  :NM0;WMMMMMMMx  ;MMMMMMMMMMMMMMMMMMMM,
+      .:dkkdl,. . 'NMMMMMMk 'kMMMMMMMMMMMMMW' .MMMMMMMMMMMMMMMMMMMMl
+              .0: 0MMMMMMMK0MMMMMMMMMMMMMMMMl  NMMMMMMMMMMMMMMMMMMMc
+             .XM:.NMMMMMMMMMMMMMMMMMMMMMMMMMd  xMMMMMMMMMMMMMMMMMNl
+             kMMx ;NMMMMMMMMMMMMMMMMMMMMMMMM:  .KMMMMMMMMMNdllll,
+            .MMMM0;.;kMMMMMMMMMMMMMMMMMMMMM0 'K;.:kXNXX0x:.;dxdd'
+            .NMMMMMN: oWMMMMMMMMMMMMMMMMMXd ;WMMXd:,..,;lxNMMWO,
+             .OWMMMMWo ;KMMMMMMMM0o,...'.   ,KMMMMMMMMNo'....
+               .lWMMMMXc.'coool:''lOKNXl      ,okkkxl;
+                 cWMMMMMW0xlloxOXNMMWKo
+                  .kWMMMMMMWKd;.  ..
+                    'kWMMWk,
+
