@@ -9,7 +9,9 @@
 .ui-helper-hidden-accessible {
   display: none;
 }
-
+.my-aloha-toolbar > div, .my-aloha-toolbar > input, .my-aloha-toolbar > button {
+  margin-left: 20px;
+} 
 
 /* site styling */
 body {
