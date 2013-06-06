@@ -17,6 +17,9 @@
         'ui/original-toggleButton': '../plugins/common/ui/lib/toggleButton'
       }
     },
+    sidebar = {
+      disabled: true
+    },
     errorhandling: false,
     locale: 'en',
     plugins: {
