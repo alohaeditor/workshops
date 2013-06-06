@@ -14,7 +14,9 @@ Aloha.require(['ui/surface','util/range-context','aloha/jquery'],function(Surfac
 
   // if a size is set remove all others and set the new one
   function setBtnSize(size) {
-    if (size) {
+    if (size == 'nobutton') {
+      currentLink.removeClass( 'btn');
+    } else if (size) {
       currentLink.addClass('btn btn-' + size);
     }
     for (var i = 0; i < btnSizes.length; i++) {

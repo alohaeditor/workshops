@@ -13,7 +13,7 @@ Aloha.ready( function() {
   });
 
   function setBtnStyle(style) {
-    if (style) {
+    if (style && !(style == 'nostyle')) {
       currentLink.addClass('btn btn-' + style);
     }
     for (var i = 0; i < btnStyles.length; i++) {
