@@ -13,7 +13,7 @@
 					enabled : false
 				},
 		        editables: {
-		            '#content': {
+		            '#editable-article': {
 		            	enabled : true
 		            }
 		        }
