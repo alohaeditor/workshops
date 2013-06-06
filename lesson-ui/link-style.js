@@ -22,17 +22,17 @@ Aloha.ready( function() {
       }
       currentLink.removeClass( 'btn-' + btnStyles[i]);
     }
-    $('#aloha-component-btn-style .dropdown-text').text(style);
+    $('#aloha-component-btn-style .dropdown-text').text((style=='nostyle')?'Button style':style);
   }
 
   Aloha.bind( 'aloha-link-selected', function( jEvent, aEvent ) {
     currentLink = $(aEvent.obj);
-    $('#aloha-component-btn-style>a').removeClass('disabled');
+    $('#aloha-component-btn-style>a').removeClass('disabled').removeAttr('tabindex');
 
     $('#aloha-component-btn-style>ul>li>a').each( function() {
       var style = this.id.substr(prefixBtnStyle);
       if ( currentLink.hasClass('btn-' + style) ) {
-        $('#aloha-component-btn-style .dropdown-text').text(style);
+        $('#aloha-component-btn-style .dropdown-text').text((style=='nostyle')?'Button style':style);
       }
     });
   });
@@ -40,7 +40,7 @@ Aloha.ready( function() {
   Aloha.bind( 'aloha-link-unselected', function( jEvent ) {
     currentLink = null;
     $('#aloha-component-btn-style .dropdown-text').text('Button style');
-    $('#aloha-component-btn-style>a').addClass('disabled');
+    $('#aloha-component-btn-style>a').addClass('disabled').attr('tabindex', '-1');
   });
 
 });

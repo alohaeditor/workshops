@@ -25,7 +25,7 @@ Aloha.require(['ui/surface','util/range-context','aloha/jquery'],function(Surfac
       }
       currentLink.removeClass( 'btn-' + btnSizes[i]);
     }
-    $('#aloha-component-btn-size .dropdown-text').text(size);
+    $('#aloha-component-btn-size .dropdown-text').text((size=='nobutton')?'Button size':size);
   }
 
   // do magic when a link is selected 
@@ -35,13 +35,13 @@ Aloha.require(['ui/surface','util/range-context','aloha/jquery'],function(Surfac
     currentLink = $(aEvent.obj);
 
     // enable the link size drop down button
-    $('#aloha-component-btn-size>a').removeClass('disabled');
+    $('#aloha-component-btn-size>a').removeClass('disabled').removeAttr('tabindex');
 
     // update dropdown description
     $('#aloha-component-btn-size>ul>li>a').each(function() {     
       var size = this.id.substr(prefixBtnSize);
       if ( currentLink.hasClass('btn-' + size) ) {
-        $('#aloha-component-btn-size .dropdown-text').text(size);
+        $('#aloha-component-btn-size .dropdown-text').text((size=='nobutton')?'Button size':size);
       }
     });
   });
@@ -50,7 +50,7 @@ Aloha.require(['ui/surface','util/range-context','aloha/jquery'],function(Surfac
   Aloha.bind( 'aloha-link-unselected', function( jEvent ) {
     currentLink = null;
     $('#aloha-component-btn-size .dropdown-text').text('Button size');
-    $('#aloha-component-btn-size>a').addClass('disabled');
+    $('#aloha-component-btn-size>a').addClass('disabled').attr('tabindex','-1');
   });
 
 });
