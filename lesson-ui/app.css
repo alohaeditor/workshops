@@ -1,4 +1,7 @@
 /* Aloha Editor style first, just for your comfort */
+#toolbar .navbar-inner {
+  background-image: linear-gradient(to bottom, rgb(228, 247, 255), rgb(189, 203, 209));
+}
 .aloha-editable:hover,.aloha-editable-active,
 .navbar .nav>li>a.aloha-editable-active, .navbar .nav>li>a.aloha-editable:hover  {
   background-color: #fcf8e3;
@@ -12,12 +15,32 @@
 .my-aloha-toolbar > div, .my-aloha-toolbar > input, .my-aloha-toolbar > button {
   margin-left: 20px;
 } 
-
 /* site styling */
 body {
   padding-top: 95px;
   padding-bottom: 60px;
 }
+
+#aloha-component-create-table .aloha-icon { background-position: -96px 0; }
+#aloha-component-mergecells .aloha-icon { background-position: -384px 0; }
+#aloha-component-splitcells .aloha-icon { background-position: -400px 0; }
+#aloha-component-table-caption .aloha-icon { background-position: -320px 0; }
+#aloha-component-addcolumnleft .aloha-icon { background-position: -112px 0; }
+#aloha-component-addcolumnright .aloha-icon { background-position: -128px 0; }
+#aloha-component-deletecolumns .aloha-icon { background-position: -192px 0; }
+#aloha-component-columnheader .aloha-icon { background-position: -368px 0; }
+#aloha-component-mergecells-column .aloha-icon { background-position: -384px 0; }
+#aloha-component-splitcells-column .aloha-icon { background-position: -400px 0; }
+#aloha-component-addrowbefore .aloha-icon { background-position: -144px 0; }
+#aloha-component-addrowafter .aloha-icon { background-position: -160px 0; }
+#aloha-component-deleterows .aloha-icon { background-position: -176px 0; }
+#aloha-component-rowheader .aloha-icon { background-position: -352px 0; }
+#aloha-component-mergecells-row .aloha-icon { background-position: -384px 0; }
+#aloha-component-splitcells-row .aloha-icon { background-position: -400px 0; }
+table td.success { background-color: #dff0d8; }
+table td.error { background-color: #f2dede; }
+table td.warning { background-color: #fcf8e3; }
+table td.info { background-color: #d9edf7; }
 
 /* Custom container */
 .container {
