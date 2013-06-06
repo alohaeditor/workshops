@@ -108,20 +108,17 @@ define([
 	 */
 	function buttonClick() {
 		console.log('click');
-		var markup = jQuery('<div class="training">'),
+		var markup = jQuery('<span class="training">'),
 			rangeObject = Aloha.Selection.rangeObject;
 
 		if ( rangeObject.isCollapsed() ) {
 					GENTICS.Utils.Dom.extendToWord( rangeObject );
 		}
 
-		//Add a unique class to make selection handling easyer
-		var temporaryMarker = "aloha-selection-update" + Math.random().toString(16).substr(2);
-		markup.addClass(temporaryMarker);
 		// add the markup
 		GENTICS.Utils.Dom.addMarkup( rangeObject, markup );
 		// now we update our selection
-		updateSelection(rangeObject, temporaryMarker);
+		rangeObject.select();
 	}
 
 	/**
@@ -149,9 +146,9 @@ define([
 			id: 'aloha-training-panel',
 			title: i18n.t( 'sidebar.training.title' ),
 			expanded: true,
-			activeOn: 'div.training',
+			activeOn: 'span.training',
 			content: '<div id="aloha-training-panel-content">\
-						You div contains: <span id="aloha-training-panel-effective-content"></span>\
+						The current span contains: <span id="aloha-training-panel-effective-content"></span>\
 					  </div>',
 			onInit: function () {
 				console.log("Init sidebar called");
