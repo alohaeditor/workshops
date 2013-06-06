@@ -103,7 +103,6 @@ header {
 	position: relative;
 	width: 100%;
 	height: 400px;
-	min-height: 400px;
 	background-color: #4cd2da;
 	background-image: -webkit-linear-gradient(
 		50deg,
@@ -155,7 +154,7 @@ header h2 {
 }
 
 header.collapsed {
-	min-height: 100px;
+	height: 100px;
 }
 header.collapsed>:first-child>* {
 	display: inline-block;
@@ -297,6 +296,20 @@ section>div q {
 }
 .white.lettering>.a:last-child {
 	border-bottom-color: #fff;
+}
+
+table {
+	border-collapse: collapse;
+	border: 4px solid #eaeaea;
+}
+table td {
+	padding: 5px 10px;
+	margin: 0;
+	border-top: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+}
+table tr:nth-child(2n+1) td {
+	background: whiteSmoke;
 }
 
 /** -- `footer -- */

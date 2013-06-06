@@ -5,7 +5,7 @@
 Christopher Supnig
 Clemens Prerovsky
 Haymo Meran
-Martin Schönbergero
+Martin Schoenberger
 Petro Salema
 Rene Kapusta
 
@@ -14,7 +14,7 @@ http://www.gentics.com
 http://www.ektron.com
 
 # TECHNOLOGY
-jQuery, Faricy New Web Font
+Aloha Editor, Faricy New Web Font, jQuery, RequireJS, WikiDocs
 
                             ,oKMMWx,
                          .oXMMMMMMMMKd,             .   ..
