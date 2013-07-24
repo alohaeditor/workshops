@@ -3,30 +3,55 @@
 define([
 	'aloha/core',
 	'aloha/plugin',
+	'aloha/jquery',
+	'aloha/sidebar',
 	'ui/ui',
 	'ui/button',
-	'i18n!training/nls/i18n',
-	'i18n!aloha/nls/i18n',
-	'jquery',
+	'util/dom',
 	'css!training/css/training.css'
-], function (Aloha, Plugin, Ui,	Button, i18n, i18nCore, jQuery) {
+], function (
+	Aloha,
+	Plugin,
+	$,
+	Sidebars,
+	Ui,
+	Button,
+	Dom
+) {
 	'use strict';
 
-	/**
-	 * We create and return the plugin.
-	 */
-    return Plugin.create('training', {
-		
-		/**
-		 * Configure the available languages
-		 */
-		languages: ['en', 'de'],
+	var buttons = {};
 
-		/**
-		 * Initialize the plugin
-		 */
+	function buttonClick() {
+		var range = Aloha.Selection.rangeObject;
+		range.isCollapsed() && Dom.extendToWord(range);
+		Dom.addMarkup(range, $('<span class="training">'));
+		range.select();
+	}
+
+	function createButton() {
+		buttons.toggleTrainingButton= Ui.adopt('toggleTraining', Button, {
+			tooltip: 'Testing',
+			icon: 'aloha-icon aloha-icon-traing',
+			scope: 'Aloha.continuoustext',
+			click: buttonClick
+		});
+	}
+
+	function prepareSidebar(sidebar) {
+		sidebar.addPanel({
+			id: 'aloha-training-panel',
+			title: 'Training',
+			expanded: true,
+			activeOn: 'span.training',
+			content: '<div class="training">Training</div>'
+		});
+	}
+
+    return Plugin.create('training', {
+		languages: ['en', 'de'],
 		init: function () {
-			console.log('training init');
+			createButton() || prepareSidebar(Sidebars.right);
 		}
 	});
 });

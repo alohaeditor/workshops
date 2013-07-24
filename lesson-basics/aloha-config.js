@@ -8,7 +8,7 @@
 	Aloha.settings.plugins = {
 		format: {
 			editables: {
-				'h1.editable': ['b']
+				'h1.editable': ['i']
 			}
 		}
 	};

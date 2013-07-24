@@ -1,25 +1,35 @@
 define([
-	'jquery',
+	'aloha/jquery',
 	'aloha/core',
-	'aloha/plugin'
+	'aloha/plugin',
+	'aloha/contenthandlermanager'
 ], function (
 	$,
 	Aloha,
-	Plugin
+	Plugin,
+	ContentHandlerManager
 ) {
 	'use strict';
 
-	var plugin;
+	// foo http://www.youtube.com/watch?v=UUV4YKbiVxQ bar
 
-	/**
-	 * MyTube Plugin
-	 */
-	plugin = Plugin.create('mytube', {
-		settings: {},
-		init: function () {
-			alert('MyTube Plugin is good to go!');
+	var YOUTUBE_LINK = /(?:(?:https?\:\/\/)?(?:(?:www|m)\.)?youtube\.com\/watch\?v=)(\w+)/g;
+
+	var YouTubeHandler = ContentHandlerManager.createHandler({
+		handleContent: function (content) {
+			return content.replace(
+				YOUTUBE_LINK,
+				'<div data-aloha-block-type="YouTubeBlock" data-ytcode="$1">$1</div>'
+			);
 		}
 	});
 
-	return plugin;
+	ContentHandlerManager.register('youtube', YouTubeHandler);
+
+	Aloha.settings.contentHandler.insertHtml = ['youtube'];
+
+	return Plugin.create('mytube', {
+		settings: {},
+		init: function () {}
+	});
 });
