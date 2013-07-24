@@ -6,6 +6,7 @@
     <title>&#9650;&#9646;&#9679;&#9632;&#9650; &middot; Bootstrap</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../aloha-editor/src/css/aloha.css" type="text/css">
+    <link rel="stylesheet" href="../aloha-editor/src/css/aloha-common-extra.css" type="text/css">
     <link rel="stylesheet" href="../aloha-editor/src/plugins/common/ui-a-la-carte/css/ui-a-la-carte.css" type="text/css">
     <link href="app.css" rel="stylesheet">
   </head>
@@ -71,6 +72,7 @@ var ui = Aloha.require(['ui/ui'], function(ui){
             <div class="tab-pane" id="insert">
               <div class="btn-group">
                 <button class="btn" id="aloha-component-insert-link"><span class="aloha-icon"></span></button>
+                <button class="btn" type="button" id="aloha-component-create-table" role="menuitem"><i class="aloha-icon"></i></button>
               </div>
             </div>
 
@@ -106,6 +108,47 @@ var ui = Aloha.require(['ui/ui'], function(ui){
                   <li><a class="aloha-component-link" id="aloha-component-btn-style-danger" href="#">danger</a></li>
                   <li><a class="aloha-component-link" id="aloha-component-btn-style-inverse" href="#">inverse</a></li>
                   <li><a class="aloha-component-link" id="aloha-component-btn-style-link" href="#">link</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="table">
+              <div class="btn-group">
+                <button class="btn" type="button" id="aloha-component-mergecells" disabled="disabled" role="menuitem"><i class="aloha-icon"></i></button>
+                <button class="btn" type="button" id="aloha-component-splitcells" disabled="disabled" role="menuitem"><i class="aloha-icon"></i></button>
+                <button class="btn" type="button" id="aloha-component-table-caption" role="menuitem"><i class="aloha-icon"></i></button>
+
+                <button class="btn" type="button" id="aloha-component-addcolumnleft" role="menuitem"><i class="aloha-icon"></i></button>
+                <button class="btn" type="button" id="aloha-component-addcolumnright" role="menuitem"><i class="aloha-icon"></i></button>
+                <button class="btn" type="button" id="aloha-component-addrowbefore" role="menuitem"><i class="aloha-icon"></i></button>
+                <button class="btn" type="button" id="aloha-component-addrowafter" role="menuitem"><i class="aloha-icon"></i></button>
+
+                <button class="btn" type="button" id="aloha-component-columnheader" role="menuitem"><i class="aloha-icon"></i></button>
+                <button class="btn" type="button" id="aloha-component-rowheader" role="menuitem"><i class="aloha-icon"></i></button>
+
+                <button class="btn" type="button" id="aloha-component-deletecolumns" role="menuitem"><i class="aloha-icon"></i></button>
+                <button class="btn" type="button" id="aloha-component-deleterows" role="menuitem"><i class="aloha-icon"></i></button>
+              </div>
+              <div id="aloha-component-format-table" class="aloha-component-block btn-group dropdown">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#" role="menuitem">
+                  <span class="dropdown-text" data-default-text="Table Default">Table</span>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu pull-right" role="menu">
+                <li><a id="aloha-component-table" href="#">Table</a></li>
+                <li><a id="aloha-component-table-bordered" href="#">Table Bordered</a></li>
+                </ul>
+              </div>
+              <div id="aloha-component-format-row" class="aloha-component-block btn-group dropdown">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#" role="menuitem">
+                  <span class="dropdown-text" data-default-text="Row Default">Row</span>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu pull-right" role="menu">
+                <li><a id="aloha-component-success" href="#">Row Success</a></li>
+                <li><a id="aloha-component-error" href="#">Row Error</a></li>
+                <li><a id="aloha-component-warning" href="#">Row Warning</a></li>
+                <li><a id="aloha-component-info" href="#">Row Info</a></li>
                 </ul>
               </div>
             </div>
@@ -193,7 +236,8 @@ var ui = Aloha.require(['ui/ui'], function(ui){
                           common/link,
                           common/contenthandler,
                           common/paste,
-                          common/image,                          
+                          common/image,
+                          common/table,
                           common/commands"></script>
     <script src="aloha-ready.js"></script>
     <script src="image.js"></script>

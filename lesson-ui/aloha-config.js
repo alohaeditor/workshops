@@ -17,6 +17,9 @@
         'ui/original-toggleButton': '../plugins/common/ui/lib/toggleButton'
       }
     },
+    sidebar: {
+      disabled: true
+    },
     errorhandling: false,
     locale: 'en',
     plugins: {
@@ -76,6 +79,10 @@
         "bdo",
         "ins",
         "del"]
+      },
+      table: {
+        tableConfig:  [ {name: 'table' }, {name: 'table-bordered' } ],
+        rowConfig:    [ {name: 'success'   }, {name: 'error'   }, {name: 'warning'   }, {name: 'info'} ],
       }
     }
   };
